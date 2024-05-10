@@ -1,0 +1,95 @@
+body {
+    width: 1100px;
+    height: 1000px;
+    background-image: url(../image/road.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: sky-gradient 30s infinite alternate;
+}
+
+.sun {
+    width: 250px;
+    position: relative;
+    left: 900px;
+    animation: sun-rotate 20s infinite linear;
+    transform-origin: center;
+}
+
+.bird2 {
+    width: 100px;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    animation: bird2-fly 15s infinite alternate;
+}
+
+.bird {
+    width: 80px;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    animation: bird-fly 10s infinite alternate;
+}
+
+.bus {
+    width: 400px;
+    height: 350px;
+    position: absolute;
+    top: 600px;
+    left: -400px;
+    animation: bus-move 50s infinite linear;
+}
+
+.car {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 800px;
+    left: -400px;
+    animation: car-move 50s infinite linear;
+    z-index: 1;
+}
+
+.rabbit {
+    width: 100px;
+    position: absolute;
+    top: 500px;
+    left: 50px;
+    animation: rabbit-jump 5s infinite alternate;
+}
+
+@keyframes sky-gradient {
+    0% { background-color: #00aaff; }
+    100% { background-color: #ff9900; }
+}
+
+@keyframes sun-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes bird2-fly {
+    0% { left: 0px; top: 50px; }
+    100% { left: 1100px; top: 500px; }
+}
+
+@keyframes bird-fly {
+    0% { left: 100px; top: 150px; }
+    100% { left: 1000px; top: 50px; }
+}
+
+@keyframes bus-move {
+    0% { left: -400px; }
+    100% { left: 1200px; }
+}
+
+@keyframes car-move {
+    0% { left: -400px; }
+    100% { left: 1200px; }
+}
+
+@keyframes rabbit-jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
